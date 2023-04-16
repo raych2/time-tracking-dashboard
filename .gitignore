@@ -17,5 +17,7 @@
 README-template.md
 style-guide.md
 node_modules/
+next-env.d.ts
+.next/
 design/
 index.html
