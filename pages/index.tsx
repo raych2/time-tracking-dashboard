@@ -1,10 +1,13 @@
 import useSWR from "swr";
+import { useState } from "react";
+import UserContainer from "../components/UserContainer";
+import ActivityContainer from "../components/ActivityContainer";
 
-interface Time {
+export interface Time {
   current: number;
   previous: number;
 }
-interface Activity {
+export interface Activity {
   title: string;
   timeframes: {
     [key: string]: Time;
@@ -13,21 +16,15 @@ interface Activity {
 const fetcher = (url: URL) => fetch(url).then((res) => res.json());
 
 export default function Index() {
+  const [timeframe, setTimeframe] = useState("daily");
   const { data, error } = useSWR<Activity[]>("/api/staticdata", fetcher);
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
 
   return (
     <div>
-      {data.map((item, index) => {
-        return (
-          <div key={index}>
-            {item.title}
-            <div>Current: {item.timeframes.daily.current}</div>
-            <div>Previous: {item.timeframes.daily.previous}</div>
-          </div>
-        );
-      })}
+      <UserContainer setTimeframe={setTimeframe} />
+      <ActivityContainer selectedTime={timeframe} data={data} />
     </div>
   );
 }
