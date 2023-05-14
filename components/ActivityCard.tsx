@@ -2,6 +2,7 @@ import Image from "next/image";
 import ellipsis from "public/images/icon-ellipsis.svg";
 import TimeDisplay from "./TimeDisplay";
 import { Activity } from "../pages";
+import styles from "./ActivityCard.module.css";
 
 type ActivityCardProps = {
   activity: Activity;
@@ -21,12 +22,15 @@ export default function ActivityCard({
     monthly: <TimeDisplay time={activity.timeframes.monthly} />,
   };
   return (
-    <div>
-      <div>
-        <h1>{activity.title}</h1>
-        <Image src={ellipsis} alt="ellipsis" />
+    <div className={styles.container}>
+      <div></div>
+      <div className={styles.activity}>
+        <div className={styles.heading}>
+          <h1 className={styles.activityType}>{activity.title}</h1>
+          <Image src={ellipsis} alt="ellipsis" className={styles.ellipsis}/>
+        </div>
+        {TIMEFRAME_STATES[selectedTime]}
       </div>
-      {TIMEFRAME_STATES[selectedTime]}
     </div>
   );
 }
