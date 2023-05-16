@@ -16,6 +16,7 @@ export default function ActivityContainer({
         return (
           <ActivityCard
             key={index}
+            background={index}
             activity={item}
             selectedTime={selectedTime}
           />

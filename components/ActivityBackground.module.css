@@ -1,0 +1,29 @@
+.container {
+  height: 90px;
+  border-radius: 15px;
+  z-index: -2;
+}
+.img {
+  height: 78px;
+  width: 78px;
+  margin: -10px 17.42px 0 159.58px;
+  z-index: 1;
+}
+.work {
+  background-color: var(--work-bg);
+}
+.play {
+  background-color: var(--play-bg);
+}
+.study {
+  background-color: var(--study-bg);
+}
+.exercise {
+  background-color: var(--exercise-bg);
+}
+.social {
+  background-color: var(--social-bg);
+}
+.selfCare {
+  background-color: var(--self-care-bg);
+}

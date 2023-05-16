@@ -3,8 +3,10 @@ import ellipsis from "public/images/icon-ellipsis.svg";
 import TimeDisplay from "./TimeDisplay";
 import { Activity } from "../pages";
 import styles from "./ActivityCard.module.css";
+import ActivityBackground from "./ActivityBackground";
 
 type ActivityCardProps = {
+  background: number;
   activity: Activity;
   selectedTime: string;
 };
@@ -13,6 +15,7 @@ interface TimeEnum {
 }
 
 export default function ActivityCard({
+  background,
   activity,
   selectedTime,
 }: ActivityCardProps) {
@@ -23,11 +26,14 @@ export default function ActivityCard({
   };
   return (
     <div className={styles.container}>
-      <div></div>
+      <ActivityBackground
+        background={background}
+        activityType={activity.title}
+      />
       <div className={styles.activity}>
         <div className={styles.heading}>
           <h1 className={styles.activityType}>{activity.title}</h1>
-          <Image src={ellipsis} alt="ellipsis" className={styles.ellipsis}/>
+          <Image src={ellipsis} alt="ellipsis" className={styles.ellipsis} />
         </div>
         {TIMEFRAME_STATES[selectedTime]}
       </div>
