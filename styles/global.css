@@ -1,16 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Rubik", sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 :root {
   /* Primary Colors */
   --blue: hsl(246, 80%, 60%);
@@ -31,4 +20,24 @@ body {
   --fw-light: 300;
   --fw-reg: 400;
   --fw-med: 500;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--darkest-blue);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.reportContainer {
+  width: 1110px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 253px auto;
 }

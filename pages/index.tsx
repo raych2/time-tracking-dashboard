@@ -22,7 +22,7 @@ export default function Index() {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className="reportContainer">
       <UserContainer setTimeframe={setTimeframe} />
       <ActivityContainer selectedTime={timeframe} data={data} />
     </div>
