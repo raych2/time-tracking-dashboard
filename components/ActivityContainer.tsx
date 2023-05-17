@@ -1,5 +1,6 @@
 import ActivityCard from "./ActivityCard";
 import { Activity } from "../pages";
+import styles from "./ActivityContainer.module.css";
 
 type ActivityContainerProps = {
   selectedTime: string;
@@ -11,7 +12,7 @@ export default function ActivityContainer({
   data,
 }: ActivityContainerProps) {
   return (
-    <div>
+    <div className={styles.container}>
       {data.map((item, index) => {
         return (
           <ActivityCard
