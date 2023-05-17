@@ -2,6 +2,7 @@
   height: 90px;
   border-radius: 15px;
   z-index: -2;
+  overflow: hidden;
 }
 .img {
   height: 78px;
