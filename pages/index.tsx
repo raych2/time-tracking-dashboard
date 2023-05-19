@@ -23,7 +23,7 @@ export default function Index() {
 
   return (
     <div className="reportContainer">
-      <UserContainer setTimeframe={setTimeframe} />
+      <UserContainer timeframe={timeframe} setTimeframe={setTimeframe} />
       <ActivityContainer selectedTime={timeframe} data={data} />
     </div>
   );

@@ -44,3 +44,15 @@
   font-weight: var(--fw-reg);
   line-height: 21px;
 }
+.timeSelection:hover {
+  color: var(--white);
+}
+.timeDisplayed {
+  margin-bottom: 21px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: var(--fs);
+  font-weight: var(--fw-reg);
+  line-height: 21px;
+}

@@ -12,6 +12,9 @@
   position: relative;
   z-index: 5;
 }
+.activity:hover {
+  background-color: hsla(236, 41%, 34%, 1);
+}
 .heading {
   display: flex;
   flex-flow: row wrap;
@@ -27,6 +30,9 @@
 .ellipsis {
   height: 5px;
   width: 16px;
+}
+.ellipsis:hover {
+  color: var(--white);
 }
 .time {
   margin-left: 30px;
