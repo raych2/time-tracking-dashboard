@@ -20,9 +20,24 @@ export default function ActivityCard({
   selectedTime,
 }: ActivityCardProps) {
   const TIMEFRAME_STATES: TimeEnum = {
-    daily: <TimeDisplay time={activity.timeframes.daily} />,
-    weekly: <TimeDisplay time={activity.timeframes.weekly} />,
-    monthly: <TimeDisplay time={activity.timeframes.monthly} />,
+    daily: (
+      <TimeDisplay
+        time={activity.timeframes.daily}
+        previousPeriod={"Yesterday"}
+      />
+    ),
+    weekly: (
+      <TimeDisplay
+        time={activity.timeframes.weekly}
+        previousPeriod={"Last Week"}
+      />
+    ),
+    monthly: (
+      <TimeDisplay
+        time={activity.timeframes.monthly}
+        previousPeriod={"Last Month"}
+      />
+    ),
   };
   return (
     <div className={styles.container}>
