@@ -37,7 +37,7 @@ export default function Navbar({ timeframe, setTimeframe }: NavbarProps) {
           <button
             onClick={() => setTimeframe("monthly")}
             className={
-              timeframe === "montly"
+              timeframe === "monthly"
                 ? styles.timeDisplayed
                 : styles.timeSelection
             }
