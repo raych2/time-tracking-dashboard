@@ -29,10 +29,10 @@
 }
 .ellipsis {
   height: 5px;
-  width: 16px;
+  width: 21px;
 }
 .ellipsis:hover {
-  color: var(--white);
+  filter: brightness(0) invert(1);
 }
 .time {
   margin-left: 30px;
