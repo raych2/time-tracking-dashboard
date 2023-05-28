@@ -47,3 +47,33 @@
   font-weight: var(--fw-light);
   color: var(--pale-blue);
 }
+@media (max-width: 480px) {
+  .container {
+    width: 327px;
+    height: 160px;
+  }
+  .activity {
+    height: 122px;
+    margin-top: -45px;
+  }
+  .heading {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 24px;
+    padding-bottom: 0;
+  }
+  .time {
+    margin: -6px 24px 0 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .current {
+    font-size: 32px;
+  }
+  .previous {
+    font-weight: var(--fw-reg);
+  }
+}

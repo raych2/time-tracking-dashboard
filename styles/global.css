@@ -41,3 +41,9 @@ body {
   justify-content: space-between;
   margin: 253px auto;
 }
+@media (max-width: 480px) {
+  .reportContainer {
+    width: 327px;
+    margin: 81px auto;
+  }
+}

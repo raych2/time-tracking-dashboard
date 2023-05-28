@@ -28,3 +28,11 @@
 .selfCare {
   background-color: var(--self-care-bg);
 }
+@media (max-width: 480px) {
+  .container {
+    height: 83px;
+  }
+  .img {
+    margin: -10px 17.42px 0 231.58px;
+  }
+}

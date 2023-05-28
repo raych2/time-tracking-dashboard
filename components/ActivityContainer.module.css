@@ -6,3 +6,13 @@
   justify-content: space-between;
   align-content: space-between;
 }
+@media (max-width: 480px) {
+  .container {
+    height: 1080px;
+    width: 327px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+}

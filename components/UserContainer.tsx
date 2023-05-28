@@ -16,8 +16,10 @@ export default function UserContainer({
     <div className={styles.user}>
       <div className={styles.userIntro}>
         <Image src={userPic} alt="User picture" className={styles.img} />
-        <p className={styles.intro}>Report for</p>
-        <h1 className={styles.name}>Jeremy Robson</h1>
+        <span>
+          <p className={styles.intro}>Report for</p>
+          <h1 className={styles.name}>Jeremy Robson</h1>
+        </span>
       </div>
       <Navbar timeframe={timeframe} setTimeframe={setTimeframe} />
     </div>
