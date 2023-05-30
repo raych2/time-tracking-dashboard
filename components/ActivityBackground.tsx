@@ -46,6 +46,7 @@ export default function ActivityBackground({
         src={ICON_STATES[background]}
         alt={`${activityType} icon`}
         className={styles.img}
+        priority={true}
       />
     </div>
   );
