@@ -17,7 +17,7 @@ export interface Activity {
 const fetcher = (url: URL) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  const [timeframe, setTimeframe] = useState("daily");
+  const [timeframe, setTimeframe] = useState("weekly");
   const { data, error } = useSWR<Activity[]>("/api/staticdata", fetcher);
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
